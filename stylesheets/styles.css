@@ -324,5 +324,6 @@ footer {
 }
 
 .op-tracker {
-  display: none;
+  left: -9999px;
+  position: absolute;
 }
