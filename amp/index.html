@@ -39,7 +39,16 @@
                   "vars": {
                       "goalId": "blue_btn_click"
                   }
-              }
+              },
+              "notBounce": {
+                      "on": "timer",
+                      "timerSpec": {
+                          "immediate": false,
+                          "interval": 10,
+                          "maxTimerLength": 15
+                      },
+                      "request": "notBounce"
+                  },
           }
       }
     </script>
