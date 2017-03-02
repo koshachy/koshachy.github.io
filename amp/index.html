@@ -1,0 +1,55 @@
+
+<!doctype html>
+<html ⚡>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <style amp-custom>
+    .one{width:100%; padding:15px; box-sizing:border-box;}
+    .content{display:block; margin-left:auto; margin-right:auto; padding:10px; text-align:center;}
+    #red {background:red; color:white; font-size:10pt;}
+    #blue {background:navy; color:white; font-size:10pt;}
+   }
+  </style>
+</head>
+<body>
+  <amp-analytics type="metrika">
+      <script type="application/json">
+          {
+              "vars": {
+                  "counterId": "43172064"
+              },
+              "triggers": {
+                  "redBtnGoalReach": {
+                      "on": "click",
+                      "selector": "#red",
+                      "request": "reachGoal",
+                      "vars": {
+                          "goalId": "red_btn_click"
+                      }
+                  },
+                  "blueBtnGoalReach": {
+                      "on": "click",
+                      "selector": "#blue",
+                      "request": "reachGoal",
+                      "vars": {
+                          "goalId": "blue_btn_click"
+                      }
+                  }
+              }
+          }
+      </script>
+  </amp-analytics>
+  <div class="content">
+    <h3>AMP-валидная страничка</h3>
+    <div class="one">
+      <amp-img src="img/morpheus.jpg" width=1024 height=425 layout="responsive"></amp-img>
+    </div>
+    <p>
+      <button id="red">I'll take Red</button>
+      <button id="blue">I'll take Blue</button>
+    </p></div>
+  </body>
+</html>
