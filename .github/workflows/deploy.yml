@@ -12,11 +12,14 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -32,19 +35,15 @@ jobs:
 
       - name: Prepare site artifact
         run: |
-          cp CNAME webApp/build/dist/wasmJs/productionExecutable/
+          DIST=webApp/build/dist/wasmJs/productionExecutable
+          cp CNAME "$DIST/"
+          echo "--- Build output ---"
+          ls -lh "$DIST/"
 
       - uses: actions/upload-pages-artifact@v3
         with:
           path: webApp/build/dist/wasmJs/productionExecutable
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
