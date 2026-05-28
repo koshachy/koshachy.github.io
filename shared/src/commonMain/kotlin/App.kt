@@ -42,7 +42,6 @@ private val TileBorderColor = Color(0xFFE2E8F0)
 private val TileHoverBorderColor = Color(0xFF7C3AED)
 private val IconTintColor = Color(0xFF475569)
 private val IconHoverTintColor = Color(0xFF7C3AED)
-private val footerColor = Color(0xFF1E293B)
 
 
 @Composable

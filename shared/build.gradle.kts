@@ -18,8 +18,8 @@ kotlin {
                 implementation("org.jetbrains.compose.material3:material3:1.11.0-alpha07")
                 implementation("org.jetbrains.compose.components:components-resources:1.11.0")
 
-                implementation("io.coil-kt.coil3:coil-compose:3.4.0")
-                implementation("io.coil-kt.coil3:coil-network-ktor3:3.4.0")
+                implementation("io.coil-kt.coil3:coil-compose:3.5.0-beta01")
+                implementation("io.coil-kt.coil3:coil-network-ktor3:3.5.0-beta01")
             }
         }
     }
