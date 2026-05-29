@@ -99,7 +99,10 @@ fun App(onOpenUrl: (String) -> Unit) {
                         )
 
                         Text(
-                            text = "Helping developers and agents write better Kotlin code through clear, precise, and structured documentation",
+                            text = """Kotlin Ecosystem Technical Writing Lead at JetBrains
+                                |
+                                |Helping developers and agents write better Kotlin code through clear, precise, and structured documentation
+                            """.trimMargin(),
                             fontSize = 16.sp,
                             color = SubtextColor,
                             textAlign = TextAlign.Center,
@@ -124,7 +127,8 @@ fun App(onOpenUrl: (String) -> Unit) {
                 Spacer(modifier = Modifier.height(48.dp))
 
                 FooterLink(
-                    text = "This page is a Compose Multiplatform for Web (Wasm-based) app. Explore the code",
+                    text = """This page is a Compose Multiplatform for Web (Kotlin/Wasm-based) app.
+                        |Explore the code""".trimMargin(),
                     url = "https://github.com/koshachy/koshachy.github.io",
                     onOpenUrl = onOpenUrl
                 )
